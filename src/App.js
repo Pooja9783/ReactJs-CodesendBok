@@ -8,6 +8,12 @@ export default function App() {
   };
   const decrementHandler = () => {
     setCounter(counter - 1);
+    if (counter < 1) {
+      setCounter("You have reached your targer!!");
+    }
+    if (counter === "You have reached your targer!!") {
+      setCounter(0);
+    }
   };
   return (
     <div className="App">
