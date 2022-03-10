@@ -3,13 +3,17 @@ import "./styles.css";
 
 export default function App() {
   const [counter, setCounter] = useState(0);
-  const AddHandler = () => {
+  const increamentHandler = () => {
     setCounter(counter + 1);
+  };
+  const decrementHandler = () => {
+    setCounter(counter - 1);
   };
   return (
     <div className="App">
       <h1>{counter}</h1>
-      <button onClick={AddHandler}>Add</button>
+      <button onClick={increamentHandler}>Increment</button>
+      <button onClick={decrementHandler}>Decrement</button>
     </div>
   );
 }
